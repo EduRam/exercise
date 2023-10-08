@@ -1,7 +1,16 @@
+fn takes_u32(x: u32) {
+    println!("u32: {x}");
+}
+
+fn takes_i8(y: i8) {
+    println!("i8: {y}");
+}
+
 fn main() {
-    let mut x: i32 = 100;
-    while x != 1 {
-        x = if x % 2 == 0 { x / 2 } else { 3 * x + 1 };
-    }
-    println!("x: {x}");
+    let x = 10;
+    let y = 20;
+
+    takes_u32(x);
+    takes_i8(y);
+    // takes_u32(y);
 }
