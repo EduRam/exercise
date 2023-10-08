@@ -1,15 +1,7 @@
 fn main() {
-    let v = vec![10, 20, 30];
-
-    v.clone().into_iter().for_each(|x| {
-        println!("x: {x}");
-    });
-
-    for x in v {
-        println!("x: {x}");
+    let mut x = 100;
+    while x != 1 {
+        x = if x % 2 == 0 { x / 2 } else { 3 * x + 1 };
     }
-
-    for i in (0..10).step_by(2) {
-        println!("i: {i}");
-    }
+    println!("x: {x}");
 }
